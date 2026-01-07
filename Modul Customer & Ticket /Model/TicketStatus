@@ -1,7 +1,0 @@
-package model.crm;
-
-public enum TicketStatus {
-    OPEN,
-    CLOSED
-}
-
