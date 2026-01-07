@@ -1,1 +1,17 @@
+package service.crm;
+
+import model.crm.Ticket;
+import repository.crm.TicketRepository;
+
+public class TicketService {
+    private TicketRepository repository = new TicketRepository();
+
+    public void openTicket(Ticket ticket) {
+        repository.save(ticket);
+    }
+
+    public void closeTicket(Ticket ticket) {
+        ticket.closeTicket();
+    }
+}
 
