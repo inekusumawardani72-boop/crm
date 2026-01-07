@@ -1,1 +1,13 @@
+package repository.crm;
+
+import java.util.ArrayList;
+import model.crm.Ticket;
+
+public class TicketRepository {
+    private ArrayList<Ticket> tickets = new ArrayList<>();
+
+    public void save(Ticket ticket) {
+        tickets.add(ticket);
+    }
+}
 
