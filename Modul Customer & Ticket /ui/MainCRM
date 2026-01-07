@@ -1,1 +1,25 @@
+package ui.crm;
+
+import model.crm.Customer;
+import model.crm.Ticket;
+import service.crm.CustomerService;
+import service.crm.TicketService;
+
+public class MainCRM {
+    public static void main(String[] args) {
+
+        CustomerService customerService = new CustomerService();
+        TicketService ticketService = new TicketService();
+
+        Customer customer = new Customer(1, "Andi", "andi@email.com", "0812345678");
+        customerService.addCustomer(customer);
+
+        Ticket ticket = new Ticket(1, "Komplain Jaringan", "Internet tidak stabil");
+        ticketService.openTicket(ticket);
+        ticketService.closeTicket(ticket);
+
+        System.out.println("Customer: " + customer.getName());
+        System.out.println("Status Ticket: " + ticket.getStatus());
+    }
+}
 
