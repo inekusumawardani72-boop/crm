@@ -1,1 +1,24 @@
+package model.crm;
+
+public class Ticket {
+    private int ticketId;
+    private String title;
+    private String description;
+    private TicketStatus status;
+
+    public Ticket(int ticketId, String title, String description) {
+        this.ticketId = ticketId;
+        this.title = title;
+        this.description = description;
+        this.status = TicketStatus.OPEN;
+    }
+
+    public void closeTicket() {
+        status = TicketStatus.CLOSED;
+    }
+
+    public TicketStatus getStatus() {
+        return status;
+    }
+}
 
