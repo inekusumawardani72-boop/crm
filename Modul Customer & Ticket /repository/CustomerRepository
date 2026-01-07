@@ -1,1 +1,13 @@
+package repository.crm;
+
+import java.util.ArrayList;
+import model.crm.Customer;
+
+public class CustomerRepository {
+    private ArrayList<Customer> customers = new ArrayList<>();
+
+    public void save(Customer customer) {
+        customers.add(customer);
+    }
+}
 
