@@ -1,1 +1,13 @@
+package service.crm;
+
+import model.crm.Customer;
+import repository.crm.CustomerRepository;
+
+public class CustomerService {
+    private CustomerRepository repository = new CustomerRepository();
+
+    public void addCustomer(Customer customer) {
+        repository.save(customer);
+    }
+}
 
